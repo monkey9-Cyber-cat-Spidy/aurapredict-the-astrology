@@ -2,7 +2,7 @@
 
 AuraPredict is a futuristic mood and zodiac experience that combines user emotions and astrology-like predictions to generate a personalized daily aura. It's a fun, mystical, and interactive web application built with HTML, CSS, and JavaScript.
 
-![AuraPredict Screenshot](https://ibb.co/fdCp6PXr)
+![AuraPredict Screenshot]([https://ibb.co/fdCp6PXr](https://i.ibb.co/fdCp6PXr/Screenshot-2025-06-10-13-16-39-083-org-torproject-android.jpg))
 
 ## ✨ Features
 
