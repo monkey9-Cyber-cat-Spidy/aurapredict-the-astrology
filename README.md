@@ -32,22 +32,35 @@ AuraPredict is a web-based astrology and mood prediction application that combin
 ---
 
 ## Architecture Diagram
-
 ```mermaid
-AuraPredict System Architecture.download-icon {
-            cursor: pointer;
-            transform-origin: center;
-        }
-        .download-icon .arrow-part {
-            transition: transform 0.35s cubic-bezier(0.35, 0.2, 0.14, 0.95);
-             transform-origin: center;
-        }
-        button:has(.download-icon):hover .download-icon .arrow-part, button:has(.download-icon):focus-visible .download-icon .arrow-part {
-          transform: translateY(-1.5px);
-        }
-        #mermaid-diagram-r2g8{font-family:var(--font-geist-sans);font-size:12px;fill:#000000;}#mermaid-diagram-r2g8 .error-icon{fill:#552222;}#mermaid-diagram-r2g8 .error-text{fill:#552222;stroke:#552222;}#mermaid-diagram-r2g8 .edge-thickness-normal{stroke-width:1px;}#mermaid-diagram-r2g8 .edge-thickness-thick{stroke-width:3.5px;}#mermaid-diagram-r2g8 .edge-pattern-solid{stroke-dasharray:0;}#mermaid-diagram-r2g8 .edge-thickness-invisible{stroke-width:0;fill:none;}#mermaid-diagram-r2g8 .edge-pattern-dashed{stroke-dasharray:3;}#mermaid-diagram-r2g8 .edge-pattern-dotted{stroke-dasharray:2;}#mermaid-diagram-r2g8 .marker{fill:#666;stroke:#666;}#mermaid-diagram-r2g8 .marker.cross{stroke:#666;}#mermaid-diagram-r2g8 svg{font-family:var(--font-geist-sans);font-size:12px;}#mermaid-diagram-r2g8 p{margin:0;}#mermaid-diagram-r2g8 .label{font-family:var(--font-geist-sans);color:#000000;}#mermaid-diagram-r2g8 .cluster-label text{fill:#333;}#mermaid-diagram-r2g8 .cluster-label span{color:#333;}#mermaid-diagram-r2g8 .cluster-label span p{background-color:transparent;}#mermaid-diagram-r2g8 .label text,#mermaid-diagram-r2g8 span{fill:#000000;color:#000000;}#mermaid-diagram-r2g8 .node rect,#mermaid-diagram-r2g8 .node circle,#mermaid-diagram-r2g8 .node ellipse,#mermaid-diagram-r2g8 .node polygon,#mermaid-diagram-r2g8 .node path{fill:#eee;stroke:#999;stroke-width:1px;}#mermaid-diagram-r2g8 .rough-node .label text,#mermaid-diagram-r2g8 .node .label text{text-anchor:middle;}#mermaid-diagram-r2g8 .node .katex path{fill:#000;stroke:#000;stroke-width:1px;}#mermaid-diagram-r2g8 .node .label{text-align:center;}#mermaid-diagram-r2g8 .node.clickable{cursor:pointer;}#mermaid-diagram-r2g8 .arrowheadPath{fill:#333333;}#mermaid-diagram-r2g8 .edgePath .path{stroke:#666;stroke-width:2.0px;}#mermaid-diagram-r2g8 .flowchart-link{stroke:#666;fill:none;}#mermaid-diagram-r2g8 .edgeLabel{background-color:white;text-align:center;}#mermaid-diagram-r2g8 .edgeLabel p{background-color:white;}#mermaid-diagram-r2g8 .edgeLabel rect{opacity:0.5;background-color:white;fill:white;}#mermaid-diagram-r2g8 .labelBkg{background-color:rgba(255, 255, 255, 0.5);}#mermaid-diagram-r2g8 .cluster rect{fill:hsl(0, 0%, 98.9215686275%);stroke:#707070;stroke-width:1px;}#mermaid-diagram-r2g8 .cluster text{fill:#333;}#mermaid-diagram-r2g8 .cluster span{color:#333;}#mermaid-diagram-r2g8 div.mermaidTooltip{position:absolute;text-align:center;max-width:200px;padding:2px;font-family:var(--font-geist-sans);font-size:12px;background:hsl(-160, 0%, 93.3333333333%);border:1px solid #707070;border-radius:2px;pointer-events:none;z-index:100;}#mermaid-diagram-r2g8 .flowchartTitleText{text-anchor:middle;font-size:18px;fill:#000000;}#mermaid-diagram-r2g8 .flowchart-link{stroke:hsl(var(--gray-400));stroke-width:1px;}#mermaid-diagram-r2g8 .marker,#mermaid-diagram-r2g8 marker,#mermaid-diagram-r2g8 marker *{fill:hsl(var(--gray-400))!important;stroke:hsl(var(--gray-400))!important;}#mermaid-diagram-r2g8 .label,#mermaid-diagram-r2g8 text,#mermaid-diagram-r2g8 text>tspan{fill:hsl(var(--black))!important;color:hsl(var(--black))!important;}#mermaid-diagram-r2g8 .background,#mermaid-diagram-r2g8 rect.relationshipLabelBox{fill:hsl(var(--white))!important;}#mermaid-diagram-r2g8 .entityBox,#mermaid-diagram-r2g8 .attributeBoxEven{fill:hsl(var(--gray-150))!important;}#mermaid-diagram-r2g8 .attributeBoxOdd{fill:hsl(var(--white))!important;}#mermaid-diagram-r2g8 .label-container,#mermaid-diagram-r2g8 rect.actor{fill:hsl(var(--white))!important;stroke:hsl(var(--gray-400))!important;}#mermaid-diagram-r2g8 line{stroke:hsl(var(--gray-400))!important;}#mermaid-diagram-r2g8 :root{--mermaid-font-family:var(--font-geist-sans);}User Interface (HTML)Event Handlers (JavaScript)Form ProcessingAura Calculation EngineZodiac API IntegrationHoroscope API IntegrationColor Blending AlgorithmEnergy Level GeneratorSymbol SelectionLocal StorageHistory ManagementData PersistenceChatbot SystemMessage ProcessingResponse GenerationAudio FeedbackWeb Audio APICSS AnimationsVisual EffectsResult Display
+graph TD
+    A["User Interface (HTML)"] --> B["Event Handlers (JavaScript)"]
+    B --> C["Form Processing"]
+    C --> D["Aura Calculation Engine"]
+    C --> E["Zodiac API Integration"]
+    C --> F["Horoscope API Integration"]
+    
+    D --> G["Color Blending Algorithm"]
+    D --> H["Energy Level Generator"]
+    D --> I["Symbol Selection"]
+    
+    J["Local Storage"] --> K["History Management"]
+    K --> L["Data Persistence"]
+    
+    M["Chatbot System"] --> N["Message Processing"]
+    N --> O["Response Generation"]
+    O --> P["Audio Feedback"]
+    
+    Q["Web Audio API"] --> P
+    R["CSS Animations"] --> S["Visual Effects"]
+    
+    B --> M
+    G --> T["Result Display"]
+    H --> T
+    I --> T
+    E --> T
+    F --> T
 ```
-
 ---
 
 ## File Structure
@@ -700,18 +713,41 @@ function playSound(type) {
 ## Data Flow
 
 ```mermaid
-AuraPredict Data Flow.download-icon {
-            cursor: pointer;
-            transform-origin: center;
-        }
-        .download-icon .arrow-part {
-            transition: transform 0.35s cubic-bezier(0.35, 0.2, 0.14, 0.95);
-             transform-origin: center;
-        }
-        button:has(.download-icon):hover .download-icon .arrow-part, button:has(.download-icon):focus-visible .download-icon .arrow-part {
-          transform: translateY(-1.5px);
-        }
-        #mermaid-diagram-r3g5{font-family:var(--font-geist-sans);font-size:12px;fill:#000000;}#mermaid-diagram-r3g5 .error-icon{fill:#552222;}#mermaid-diagram-r3g5 .error-text{fill:#552222;stroke:#552222;}#mermaid-diagram-r3g5 .edge-thickness-normal{stroke-width:1px;}#mermaid-diagram-r3g5 .edge-thickness-thick{stroke-width:3.5px;}#mermaid-diagram-r3g5 .edge-pattern-solid{stroke-dasharray:0;}#mermaid-diagram-r3g5 .edge-thickness-invisible{stroke-width:0;fill:none;}#mermaid-diagram-r3g5 .edge-pattern-dashed{stroke-dasharray:3;}#mermaid-diagram-r3g5 .edge-pattern-dotted{stroke-dasharray:2;}#mermaid-diagram-r3g5 .marker{fill:#666;stroke:#666;}#mermaid-diagram-r3g5 .marker.cross{stroke:#666;}#mermaid-diagram-r3g5 svg{font-family:var(--font-geist-sans);font-size:12px;}#mermaid-diagram-r3g5 p{margin:0;}#mermaid-diagram-r3g5 .label{font-family:var(--font-geist-sans);color:#000000;}#mermaid-diagram-r3g5 .cluster-label text{fill:#333;}#mermaid-diagram-r3g5 .cluster-label span{color:#333;}#mermaid-diagram-r3g5 .cluster-label span p{background-color:transparent;}#mermaid-diagram-r3g5 .label text,#mermaid-diagram-r3g5 span{fill:#000000;color:#000000;}#mermaid-diagram-r3g5 .node rect,#mermaid-diagram-r3g5 .node circle,#mermaid-diagram-r3g5 .node ellipse,#mermaid-diagram-r3g5 .node polygon,#mermaid-diagram-r3g5 .node path{fill:#eee;stroke:#999;stroke-width:1px;}#mermaid-diagram-r3g5 .rough-node .label text,#mermaid-diagram-r3g5 .node .label text{text-anchor:middle;}#mermaid-diagram-r3g5 .node .katex path{fill:#000;stroke:#000;stroke-width:1px;}#mermaid-diagram-r3g5 .node .label{text-align:center;}#mermaid-diagram-r3g5 .node.clickable{cursor:pointer;}#mermaid-diagram-r3g5 .arrowheadPath{fill:#333333;}#mermaid-diagram-r3g5 .edgePath .path{stroke:#666;stroke-width:2.0px;}#mermaid-diagram-r3g5 .flowchart-link{stroke:#666;fill:none;}#mermaid-diagram-r3g5 .edgeLabel{background-color:white;text-align:center;}#mermaid-diagram-r3g5 .edgeLabel p{background-color:white;}#mermaid-diagram-r3g5 .edgeLabel rect{opacity:0.5;background-color:white;fill:white;}#mermaid-diagram-r3g5 .labelBkg{background-color:rgba(255, 255, 255, 0.5);}#mermaid-diagram-r3g5 .cluster rect{fill:hsl(0, 0%, 98.9215686275%);stroke:#707070;stroke-width:1px;}#mermaid-diagram-r3g5 .cluster text{fill:#333;}#mermaid-diagram-r3g5 .cluster span{color:#333;}#mermaid-diagram-r3g5 div.mermaidTooltip{position:absolute;text-align:center;max-width:200px;padding:2px;font-family:var(--font-geist-sans);font-size:12px;background:hsl(-160, 0%, 93.3333333333%);border:1px solid #707070;border-radius:2px;pointer-events:none;z-index:100;}#mermaid-diagram-r3g5 .flowchartTitleText{text-anchor:middle;font-size:18px;fill:#000000;}#mermaid-diagram-r3g5 .flowchart-link{stroke:hsl(var(--gray-400));stroke-width:1px;}#mermaid-diagram-r3g5 .marker,#mermaid-diagram-r3g5 marker,#mermaid-diagram-r3g5 marker *{fill:hsl(var(--gray-400))!important;stroke:hsl(var(--gray-400))!important;}#mermaid-diagram-r3g5 .label,#mermaid-diagram-r3g5 text,#mermaid-diagram-r3g5 text>tspan{fill:hsl(var(--black))!important;color:hsl(var(--black))!important;}#mermaid-diagram-r3g5 .background,#mermaid-diagram-r3g5 rect.relationshipLabelBox{fill:hsl(var(--white))!important;}#mermaid-diagram-r3g5 .entityBox,#mermaid-diagram-r3g5 .attributeBoxEven{fill:hsl(var(--gray-150))!important;}#mermaid-diagram-r3g5 .attributeBoxOdd{fill:hsl(var(--white))!important;}#mermaid-diagram-r3g5 .label-container,#mermaid-diagram-r3g5 rect.actor{fill:hsl(var(--white))!important;stroke:hsl(var(--gray-400))!important;}#mermaid-diagram-r3g5 line{stroke:hsl(var(--gray-400))!important;}#mermaid-diagram-r3g5 :root{--mermaid-font-family:var(--font-geist-sans);}User Input FormForm ValidationExtract User DataCalculate Zodiac SignGenerate Aura ColorCalculate Energy LevelSelect SymbolAPI Call: Zodiac ServiceFallback: Local CalculationAPI Call: Horoscope ServiceGenerate DescriptionMood Color MappingFavorite Color BlendingBirth Date ModificationMood Energy BaseBirth Date VariationRandom Symbol SelectionCreate Prediction ObjectDisplay ResultsUpdate BackgroundTrigger ChatbotSave to LocalStorageUpdate History Display
+graph TD
+    A["User Input Form"] --> B["Form Validation"]
+    B --> C["Extract User Data"]
+    C --> D["Calculate Zodiac Sign"]
+    C --> E["Generate Aura Color"]
+    C --> F["Calculate Energy Level"]
+    C --> G["Select Symbol"]
+    
+    D --> H["API Call: Zodiac Service"]
+    H --> I["Fallback: Local Calculation"]
+    
+    J["API Call: Horoscope Service"] --> K["Generate Description"]
+    
+    E --> L["Mood Color Mapping"]
+    L --> M["Favorite Color Blending"]
+    M --> N["Birth Date Modification"]
+    
+    F --> O["Mood Energy Base"]
+    O --> P["Birth Date Variation"]
+    
+    G --> Q["Random Symbol Selection"]
+    
+    D --> R["Create Prediction Object"]
+    E --> R
+    F --> R
+    G --> R
+    J --> R
+    K --> R
+    
+    R --> S["Display Results"]
+    R --> T["Update Background"]
+    R --> U["Trigger Chatbot"]
+    
+    S --> V["Save to LocalStorage"]
+    V --> W["Update History Display"]
 ```
 
 ---
