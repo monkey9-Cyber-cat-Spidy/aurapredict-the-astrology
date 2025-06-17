@@ -278,20 +278,47 @@ document.addEventListener("DOMContentLoaded", () => {
 
   async function fetchHoroscope(sign) {
     try {
-      const response = await fetch(`https://aztro.sameerkumar.website/?sign=${sign}&day=today`, {
+      const response = await fetch("https://web-production-9d458.up.railway.app/horoscopev2", {
         method: "POST",
-      })
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          sign: sign,
+          day: "today",
+          tz: "UTC"
+        })
+      });
 
-      if (!response.ok) {
-        throw new Error("Failed to fetch horoscope")
+      if (response.ok) {
+        const data = await response.json();
+        return data.message || "The stars are aligning in your favor today.";
+      } else {
+        console.log("Horoscope API failed, using fallback message");
+        return getFallbackHoroscope(sign);
       }
-
-      const data = await response.json()
-      return data.description
     } catch (error) {
-      console.error("Error fetching horoscope:", error)
-      return "The cosmic energies are shifting too rapidly to read your stars today. Try again later."
+      console.error("Error fetching horoscope:", error);
+      return getFallbackHoroscope(sign);
     }
+  }
+
+  function getFallbackHoroscope(sign) {
+    const fallbackMessages = {
+      aries: "Your fiery energy is at its peak today. Channel it into creative pursuits.",
+      taurus: "Your practical nature will serve you well. Focus on long-term goals.",
+      gemini: "Your communication skills are enhanced. Great day for networking.",
+      cancer: "Your intuition is strong. Trust your gut feelings today.",
+      leo: "Your natural leadership shines. Others look to you for guidance.",
+      virgo: "Your attention to detail will help solve complex problems.",
+      libra: "Your sense of balance helps maintain harmony in relationships.",
+      scorpio: "Your intensity can be channeled into transformative projects.",
+      sagittarius: "Your optimism opens new doors. Stay open to opportunities.",
+      capricorn: "Your determination will help overcome any obstacles.",
+      aquarius: "Your innovative thinking leads to breakthrough ideas.",
+      pisces: "Your creativity flows freely. Express yourself through art."
+    };
+    return fallbackMessages[sign.toLowerCase()] || "The stars are aligning in your favor today.";
   }
 
   function generateAuraDescription(name, color, mood, energyLevel) {
